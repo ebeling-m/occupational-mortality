@@ -1,15 +1,8 @@
 # Packages and functiosn for estimation
 library(tidyverse)
 library(magrittr)
-library(plotrix)
 library(mgcv)
-# 
-# packageurl <- "https://cran.r-project.org/src/contrib/Archive/MortalitySmooth/MortalitySmooth_2.3.4.tar.gz"
-# install.packages(packageurl, repos=NULL, type="source")
-# packageurl <- "https://cran.r-project.org/src/contrib/Archive/svcm/svcm_0.1.2.tar.gz"
-# install.packages(packageurl, repos=NULL, type="source")
-# 
-# library(MortalitySmooth)
+library(xtable)
 
 # Additional Function borrowed from plyr package
 
