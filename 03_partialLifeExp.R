@@ -1,4 +1,5 @@
 # Calculation of Partial Life expectancy
+setwd("C:/occupation/analysisJune2021/occupational-mortality")
 source("00_packages_Fct.R")
 
 # Load data
