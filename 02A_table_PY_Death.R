@@ -1,4 +1,5 @@
 # Summary table with person year & deaths for supplemental materials
+setwd("C:/occupation/analysisJune2021/occupational-mortality")
 source("00_packages_Fct.R")
 
 # Load data
@@ -30,11 +31,13 @@ sumTab <-
   summarize(Dx = sum(Dtot), PY = round(sum(PYtot),1))
 
 # Males
-cbind(sumTab %>% filter(Sex == 1 & startAge == 61) %>% ungroup() %>% select(Dx, PY),
+males <- cbind(sumTab %>% filter(Sex == 1 & startAge == 61) %>% ungroup() %>% select(Dx, PY),
 sumTab %>% filter(Sex == 1 & startAge == 56) %>% ungroup() %>% select(Dx, PY),
 sumTab %>% filter(Sex == 1 & startAge == 51) %>% ungroup() %>% select(Dx, PY))
+xtable(males, digits = 1)
 
 # females
-cbind(sumTab %>% filter(Sex == 2 & startAge == 61) %>% ungroup() %>% select(Dx, PY),
+females <- cbind(sumTab %>% filter(Sex == 2 & startAge == 61) %>% ungroup() %>% select(Dx, PY),
       sumTab %>% filter(Sex == 2 & startAge == 56) %>% ungroup() %>% select(Dx, PY),
       sumTab %>% filter(Sex == 2 & startAge == 51) %>% ungroup() %>% select(Dx, PY))
+xtable(females, digits = 1)
